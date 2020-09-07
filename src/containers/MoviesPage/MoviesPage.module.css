@@ -1,0 +1,19 @@
+.search-form {
+  margin: 10px 0;
+}
+
+.search-input {
+  width: 600px;
+  padding: 8px;
+  text-align: center;
+  background-color: #665d57;
+  color: #923a17;
+  font-size: 20px;
+  font-style: italic;
+}
+
+.search-submit {
+  font-size: 20px;
+  padding: 8px;
+  font-style: italic;
+}

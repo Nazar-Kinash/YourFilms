@@ -1,0 +1,10 @@
+.Item {
+  padding: 10px;
+  width: 180px;
+  display: flex;
+  flex-direction: column;
+  color: #c5c5c5;
+}
+.Link {
+  text-decoration: none;
+}
