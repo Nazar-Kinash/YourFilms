@@ -1,0 +1,26 @@
+.VideoContainer {
+}
+
+.TrailerIframe {
+	width: 950px;
+	height: 580px;
+}
+
+.VideoSelector {
+	display: flex;
+
+	background-color: rgb(78, 72, 72);
+	border-bottom: 1px solid #4e280f;
+}
+
+.VideoSelectorItem {
+	margin: 0;
+	padding: 10px;
+	margin: 0;
+	cursor: pointer;
+	border-right: 1px solid #4e280f;
+}
+
+.VideoSelectorItem p {
+	margin: 0;
+}

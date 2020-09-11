@@ -1,4 +1,11 @@
 .App {
-  text-align: center;
-  color: #929292;
+	text-align: center;
+	color: #929292;
+}
+
+.PageContainer {
+	margin: auto;
+	margin-top: 60px;
+	width: 85%;
+	background-color: rgb(32, 21, 11);
 }

@@ -26,6 +26,12 @@ export const getMovieDetals = async (movie_id) => {
 		.then((response) => response.data);
 };
 
+export const getMovieTreiler = async (movie_id) => {
+	return await axios
+		.get(`${baseUrl}/movie/${movie_id}/videos?api_key=${key}`)
+		.then((response) => response.data.results);
+};
+
 export const getMovieCredits = async (movie_id) => {
 	return await axios
 		.get(`${baseUrl}/movie/${movie_id}/credits?api_key=${key}`)

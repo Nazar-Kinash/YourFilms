@@ -1,51 +1,67 @@
-.movies-card {
-  display: flex;
+.MovieDetailsPageContainer {
+}
+
+.MovieDetalsContainer {
+	display: flex;
+	justify-content: space-around;
+}
+
+.MovieCard {
+	display: flex;
+	flex-direction: column;
+}
+
+.MovieCard {
+	width: 420px;
+}
+
+.Title {
+	margin: 0;
 }
 
 .btn-go-back {
-  width: 150px;
-  height: 34px;
-  margin: 4px 0;
-  text-transform: uppercase;
-  font-weight: bold;
-  font-size: 16px;
-  color: #e63508;
-  background-color: rgba(197, 119, 3, 0);
-  border-style: none;
-  border-radius: 50%;
-  cursor: pointer;
+	width: 150px;
+	height: 34px;
+	margin: 4px 0;
+	text-transform: uppercase;
+	font-weight: bold;
+	font-size: 16px;
+	color: #e63508;
+	background-color: rgba(197, 119, 3, 0);
+	border-style: none;
+	border-radius: 50%;
+	cursor: pointer;
 }
 .btn-go-back:active {
-  outline: none;
-  background-color: rgba(197, 119, 3, 1);
+	outline: none;
+	background-color: rgba(197, 119, 3, 1);
 }
 
 .card-image {
-  width: 420px;
-  padding: 4px;
+	padding: 4px;
 }
 
 .card-info {
-  text-align: left;
+	text-align: left;
 }
 
 .nav-container {
-  border-bottom: 2px solid #272525;
-  border-top: 2px solid #272525;
+	border-bottom: 2px solid #272525;
+	border-top: 2px solid #272525;
 }
 
 .Navigation {
-  display: flex;
-  justify-content: center;
+	display: flex;
+	justify-content: center;
 }
 
 .navigation-link {
-  padding: 5px 20px;
-  color: #c5c5c5;
-  font-weight: 600;
-  text-decoration: none;
+	padding: 5px 20px;
+	color: #c5c5c5;
+	font-weight: 600;
+	text-decoration: none;
 }
 
 .navigation-link-active {
-  color: #e63508;
+	color: #e63508;
 }
