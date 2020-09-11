@@ -51,9 +51,9 @@ const MovieDetailsPage = () => {
 
 			<div className={styles.MovieDetalsContainer}>
 				<div className={styles.MovieCard}>
-					{/* <button className={styles["btn-go-back"]} onClick={goBack}>
+					<button className={styles["btn-go-back"]} onClick={goBack}>
 						{`<= Go back`}
-					</button> */}
+					</button>
 					<img
 						className={styles["card-image"]}
 						src={`https://image.tmdb.org/t/p/w500${poster_path}`}
