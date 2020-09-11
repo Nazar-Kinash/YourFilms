@@ -22,6 +22,8 @@ const MovieDetailsPage = () => {
 	const { movieId } = useParams();
 	const { poster_path, title, vote_average, overview, genres } = movieDetalInfo;
 
+	console.log(movieDetalInfo);
+
 	useEffect(() => {
 		getMovieDetals(movieId).then((movieDetals) =>
 			setMovieDetalInfo(movieDetals)
@@ -45,20 +47,24 @@ const MovieDetailsPage = () => {
 
 	return (
 		<div className={`PageContainer ${styles.MovieDetailsPageContainer}`}>
+			<h2 className={styles.Title}>{title}</h2>
+
 			<div className={styles.MovieDetalsContainer}>
 				<div className={styles.MovieCard}>
-					<button className={styles["btn-go-back"]} onClick={goBack}>
+					{/* <button className={styles["btn-go-back"]} onClick={goBack}>
 						{`<= Go back`}
-					</button>
+					</button> */}
 					<img
 						className={styles["card-image"]}
 						src={`https://image.tmdb.org/t/p/w500${poster_path}`}
 						alt={`belongs_to_collection.poster_path`}
 					/>
+					<h3>Overvive</h3>
+					<p>{overview} </p>
+				</div>
+				<div>
 					<div className={styles["card-info"]}>
 						<p>{`Uesr score: ${vote_average}`}</p>
-						<h3>Overvive</h3>
-						<p>{overview} </p>
 						<h3>Genres</h3>
 						{genres &&
 							genres.map(({ id, name }) => (
@@ -67,9 +73,6 @@ const MovieDetailsPage = () => {
 								</li>
 							))}
 					</div>
-				</div>
-				<div>
-					<h2 className={styles.Title}>{title}</h2>
 					<Video trailers={trailers} />
 				</div>
 			</div>
