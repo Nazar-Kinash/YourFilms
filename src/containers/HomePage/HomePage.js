@@ -1,17 +1,17 @@
-import React, { useState, useEffect } from 'react';
-import { getTpendingMovies } from '../../servise/movies-API';
-import MoviesList from '../../components/MoviesList/MoviesList';
+import React, { useState, useEffect } from "react";
+import { getTpendingMovies } from "../../servise/movies-API";
+import MoviesSlider from "../../components/MoviesSlider/MoviesSlider";
 
 const HomePage = () => {
-  const [trendingMoviesList, setTrendingMoviesList] = useState([]);
+	const [trendingMoviesList, setTrendingMoviesList] = useState([]);
 
-  useEffect(() => {
-    getTpendingMovies().then((movies) => {
-      setTrendingMoviesList(movies);
-    });
-  }, []);
+	useEffect(() => {
+		getTpendingMovies().then((movies) => {
+			setTrendingMoviesList(movies);
+		});
+	}, []);
 
-  return <MoviesList moviesList={trendingMoviesList} />;
+	return <MoviesSlider moviesList={trendingMoviesList} />;
 };
 
 export default HomePage;

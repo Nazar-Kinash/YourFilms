@@ -3,9 +3,14 @@
 	color: #929292;
 }
 
-.PageContainer {
-	margin: auto;
-	margin-top: 60px;
-	width: 85%;
-	background-color: rgb(32, 21, 11);
+.prev {
+	width: 20px;
+	background-color: #fff;
+	height: 100%;
+}
+
+.next {
+	width: 20px;
+	background-color: rgb(177, 25, 25);
+	height: 100%;
 }

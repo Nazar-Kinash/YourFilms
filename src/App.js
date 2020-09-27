@@ -13,23 +13,21 @@ const MoviesPage = lazy(() => import("./containers/MoviesPage/MoviesPage"));
 
 function App() {
 	return (
-		<>
-			<div className="App">
-				<Header />
-				<Suspense
-					fallback={
-						<Loader type="Rings" color="#00BFFF" height={80} width={80} />
-					}
-				>
-					<Switch>
-						<Route exact path={routes.HOME} component={HomePage} />
-						<Route path={routes.MOVIE_DETAILS} component={MovieDetailsPage} />
-						<Route path={routes.MOVIES} component={MoviesPage} />
-						<Redirect to={routes.HOME} />
-					</Switch>
-				</Suspense>
-			</div>
-		</>
+		<div className="App">
+			<Header />
+			<Suspense
+				fallback={
+					<Loader type="Rings" color="#00BFFF" height={80} width={80} />
+				}
+			>
+				<Switch>
+					<Route exact path={routes.HOME} component={HomePage} />
+					<Route path={routes.MOVIE_DETAILS} component={MovieDetailsPage} />
+					<Route path={routes.MOVIES} component={MoviesPage} />
+					<Redirect to={routes.HOME} />
+				</Switch>
+			</Suspense>
+		</div>
 	);
 }
 

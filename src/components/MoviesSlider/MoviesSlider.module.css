@@ -1,0 +1,80 @@
+.Slider {
+	position: relative;
+	display: flex;
+	justify-content: center;
+	width: 90%;
+	margin: 0 auto;
+	padding: 10px 0;
+	border: 1px solid #c5c5c5;
+}
+
+.carousel-container {
+	width: 97%;
+	position: relative;
+	display: flex;
+}
+
+.carousel-list {
+	display: flex;
+	justify-content: center;
+}
+.carousel-button-group {
+	height: 40px;
+	/* background-color: rgb(26, 18, 18); */
+	position: absolute;
+	top: 50%;
+	transform: translateY(-50%);
+	display: flex;
+	justify-content: space-between;
+	width: 100%;
+}
+
+.Prev,
+.Next {
+	width: 24px;
+	background-color: #fff;
+	background-size: contain;
+	background-repeat: no-repeat;
+	background-position: center;
+}
+
+.Prev {
+	background-image: url(../../icons/left-arrow.svg);
+}
+.Next {
+	background-image: url(../../icons/right-arrow.svg);
+}
+
+.SliderItem {
+	display: flex;
+	justify-content: center;
+}
+
+.ItemInfo {
+	padding: 10px;
+	width: 140px;
+	display: flex;
+	flex-direction: column;
+	color: #c5c5c5;
+	position: relative;
+	transition: 100ms;
+}
+.Link {
+	text-decoration: none;
+}
+
+.Title {
+	opacity: 0;
+	height: 90px;
+	width: 140px;
+	background-color: rgb(145, 134, 99);
+	position: absolute;
+	bottom: 10px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+.ItemInfo:hover .Title {
+	opacity: 0.98;
+	transition: 200ms;
+}
