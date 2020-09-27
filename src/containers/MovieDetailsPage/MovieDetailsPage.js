@@ -22,7 +22,7 @@ const MovieDetailsPage = () => {
 	const { movieId } = useParams();
 	const { poster_path, title, vote_average, overview, genres } = movieDetalInfo;
 
-	console.log(movieDetalInfo);
+	// console.log(movieDetalInfo);
 
 	useEffect(() => {
 		getMovieDetals(movieId).then((movieDetals) =>

@@ -1,10 +1,28 @@
 .Item {
-  padding: 10px;
-  width: 180px;
-  display: flex;
-  flex-direction: column;
-  color: #c5c5c5;
+	padding: 10px;
+	width: 140px;
+	display: flex;
+	flex-direction: column;
+	color: #c5c5c5;
+	position: relative;
+	transition: 100ms;
 }
 .Link {
-  text-decoration: none;
+	text-decoration: none;
+}
+
+.Title {
+	opacity: 0;
+	height: 90px;
+	width: 140px;
+	background-color: rgb(145, 134, 99);
+	position: absolute;
+	bottom: 10px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+.Item:hover .Title {
+	opacity: 0.98;
+	transition: 200ms;
 }
