@@ -1,17 +1,36 @@
 import React, { useState, useEffect } from "react";
-import { getTpendingMovies } from "../../servise/movies-API";
+import {
+  getGenres,
+  getTpendingMovies,
+  searchMovies,
+} from "../../servise/movies-API";
 import MoviesSlider from "../../components/MoviesSlider/MoviesSlider";
 
 const HomePage = () => {
-	const [trendingMoviesList, setTrendingMoviesList] = useState([]);
+  const [trendingMoviesList, setTrendingMoviesList] = useState([]);
+  const [moviesGenresList, setMoviesGenresList] = useState([]);
 
-	useEffect(() => {
-		getTpendingMovies().then((movies) => {
-			setTrendingMoviesList(movies);
-		});
-	}, []);
+  useEffect(() => {
+    getTpendingMovies().then((movies) => {
+      setTrendingMoviesList(movies);
+    });
+    getGenres().then((data) =>
+      data.forEach(({ name }) =>
+        searchMovies(name).then((movies) =>
+          setMoviesGenresList([...moviesGenresList, { title: name, movies }])
+        )
+      )
+    );
+  }, []);
 
-	return <MoviesSlider moviesList={trendingMoviesList} />;
+  console.log(moviesGenresList);
+  return (
+    <>
+      <MoviesSlider moviesList={trendingMoviesList} />
+      <MoviesSlider moviesList={trendingMoviesList} />
+      <MoviesSlider moviesList={trendingMoviesList} />
+    </>
+  );
 };
 
 export default HomePage;
